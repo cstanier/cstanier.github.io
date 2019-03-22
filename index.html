@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Cube by FreeHTML5.co
+	Twitter: http://twitter.com/gettemplateco
+	URL: http://freehtml5.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Auto-Tunes &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
+						<div id="gtco-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Website Template by FreeHTML5.co"></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+						
+							<li><a href="portfolio.html">Demo</a></li>
+							
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+
+		<header id="gtco-header" class="gtco-cover" role="banner">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="row">
+									<div class="col-md-5 text-center header-img animate-box">
+										<img src="images/cube.png" alt="Free HTML5 Website Template by FreeHTML5.co">
+									</div>
+									<div class="col-md-7 copy animate-box">
+										<h1>Auto-Tunes</h1>
+										<p >A pitch tracking tool that lets anyone play instruments with their voice. Created for an EECS 352 final project at Northwestern University.</p>
+										<p>Developers: Tony Leonardi, Tomi Inouye, and Charlie Stanier Instructor: Brian Pardo </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END #gtco-header -->
+
+		
+		<!-- END .gtco-client -->
+
+		<div class="gtco-services gtco-section">
+			<div class="gtco-container">
+				<div class="row row-pb-sm">
+					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+						<h2>Listen</h2>
+						<p>See examples of Auto-Tunes in Action</p>
+						<p><a href="portfolio.html" class="btn btn-special">Visit the Demo</a></p>
+					</div>
+				</div>
+				<div class="row row-pb-md">
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-light-bulb"></i> Motivation</h3>
+							<p>We felt like even though plenty of people might not know how to play an instrument, that shouldn't stop them from being able to create music. Traditionally, learning how to play an instrument, though rewarding, takes hours of practice and dedication. Auto-Tunes allows anyone who can hum a melody to instantly become a musician by converting their hummed input into MIDI output that’s playable through any instrument you like. With optional inputs to set the key and bmp of the MIDI output, Auto-Tunes can be used as an actual recording tool, or simply as a fun way to create original music.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-settings"></i> How it Works</h3>
+							<p>All a user needs as input to Auto-Tunes is a .wav recording of them humming a melody. They also have the choice to input optional inputs for the key of the melody and the bmp of the song, or they can be left out and set automatically. Our function then combines pitch tracking, onset/offset detection, and noise reduction in order to recreate the melody as accurately as possible in the form of MIDI digital output that is returned to the user.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-paint-roller"></i> Development</h3>
+							<p>We used librosa library functions for our pitch tracker and onset/offset detector as well as the numpy package for our arrays. The majority of the work in our project went into connecting the onset/offset detection accurately with the pitch and cleaning the input signal to optimize the output. Our main method for connecting the onset/offset was by using equal hop sizes as the pitch tracker. This way we could create a sorted array of different events labeled as either an onset, an offset or a pitch change.  This method allowed us to most easily create a midi file using the data. In terms of cleaning the data, we used methods such as optional bpm and key signature inputs, removing pitch spikes that were too short to have been sung and removing excessive repetition that was caused by occasional inaccuracies in the onset detector.</p>
+						</div>
+					</div>
+
+
+
+					<div class="row row-pb-md">
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-comments"></i> Testing</h3>
+							<p>To test the data, we used the MIR-QBSH dataset, which was created by J Stephen Downey.  This dataset had both positives and negatives for us. It was good because it was a large dataset of many normal people trying to hum melodies. This allowed us to see what would happen when someone did not quite hit the right pitch as well as tuning different parts of our code to humans humming. The negative was that the humming would not start immediately when the recording started but the ground truth midi file did.  This meant that the notes of our midi representation and the ground truth representation did not line up.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service ">
+							<h3><i class="ti-pie-chart"></i> Results</h3>
+							<p>When we ran our algorithm over the entire dataset we achieved 14% accuracy, but when we ran the data on individual audio files and were able to line up the audio by hand the accuracy ranged from 25-40%. Additionally when listening back to the midi files our function created, there were always errors, but the melody was always easy to distinguish. If we had more time to work on the project we could more accurately test the data by either creating our own dataset or altering the dataset that we used to have the melody begin at the beginning of the wave file for every recording.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 service-wrap">
+						<div class="service">
+							<h3><i class="ti-ruler-pencil"></i> Resources</h3>
+							<p></p>
+						</div>
+					</div>
+
+
+					<div class="clearfix visible-md-block visible-sm-block"></div>
+
+				</div>
+			</div>
+		</div>
+		<!-- END .gtco-services -->
+
+		
+		<!-- END .gtco-products -->
+
+		
+		
+
+		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
+			<div class="gtco-container">
+				<div class="row row-pb-md">
+					<div class="col-md-8 col-md-offset-2 gtco-cta text-center">
+						<h3>Try it yourself</h3>
+						<p><a href="https://github.com/aleonardi33/EECS352_STATM" class="btn btn-white btn-outline">Link to our Github</a></p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="gtco-copyright">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-6 text-left">
+							<p><small>&copy; 2016 Free HTML5. All Rights Reserved. </small></p>
+						</div>
+						<div class="col-md-6 text-right">
+							<p><small>Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com" target="_blank">Unsplash</a></small> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
