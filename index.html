@@ -92,11 +92,17 @@
 										<img src="images/cube.png" alt="Free HTML5 Website Template by FreeHTML5.co">
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>Auto-Tunes</h1>
-										<p >A pitch tracking tool that lets anyone play instruments with their voice. Created for an EECS 352 final project at Northwestern University.</p>
-										<p>Developers: Tony Leonardi, Tomi Inouye, and Charlie Stanier Instructor: Brian Pardo </p>
+										<h1>NFL Twitter Net</h1>
+										<p >An Artificial Neural Network that uses both NFL statistics as well as tweets from fans to predict NFL game outcomes. </p>
+										<p>Created for an EECS 396 intro to Deep Learning final project at Northwestern University.</p>
+										<p>Developers: Kobe Mandell, and Charlie Stanier </p>
+										<p>Contact Info: charlesstanier2021@u.northwestern.edu</p>
+										<p>Instructor: Brian Pardo </p>
 									</div>
 								</div>
+								<div class="row">
+									<p>Test</p>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -121,20 +127,20 @@
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
 							<h3><i class="ti-light-bulb"></i> Motivation</h3>
-							<p>Even though plenty of people might not know how to play an instrument, that shouldn't stop them from being able to create music. Traditionally, learning how to play an instrument, though rewarding, takes hours of practice and dedication. Auto-Tunes allows anyone who can hum a melody to instantly become a musician by converting their hummed input into MIDI output that’s playable through any instrument you like. With optional inputs to set the key and bmp of the MIDI output, Auto-Tunes can be used as an actual recording tool, or simply as a fun way to create original music.</p>
+							<p>Attempting to predict the outcomes of athletic contests is a process as old as sports themselves, but up until now, most models relied on hard statistics about the players and teams involved without taking into consideration how the fans might play a part in the process. Our goal as a team was to see if utilizing data from social media, specifically Twitter, could help a neural network predict the outcomes of NFL football games. Harnessing ‘the wisdom of the  crowds’ is not a new idea and has been used to help other models predict major events like stock market fluctuations and disease outbreaks, but we believe it could hold important insights into how a team will perform in a contest whether its a direct result of their fan’s support through motivation, or a proxy measure of overall performance game to game.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-settings"></i> How it Works</h3>
-							<p>All a user needs as input to Auto-Tunes is a .wav recording of them humming a melody. They also have the choice to input optional inputs for the key of the melody and the bmp of the song, or they can be left out and set automatically. Our function then combines pitch tracking, onset/offset detection, and noise reduction in order to recreate the melody as accurately as possible in the form of MIDI digital output that is returned to the user.
+							<h3><i class="ti-settings"></i> Technical Overview</h3>
+							<p>Our research combines two previous predictive models into one. We started with an artificial neural network specifically designed to use NFL team statistics to predict game outcomes, using the same statistics and network structure. We then used tweets from a different model to create two new features for our network; tweet rate, which was a borrowed metric from the twitter model that measured the change in total tweets about a team week to week, and crowd sentiment, our very own metric which used the average polarity (positive or negative attitude) of all fan tweets about a given team each week to create a single score.
 							</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4 service-wrap">
 						<div class="service">
-							<h3><i class="ti-paint-roller"></i> Development</h3>
-							<p>We used librosa library functions for our pitch tracker and onset/offset detector as well as the numpy package for our arrays. The majority of the work in our project went into connecting the onset/offset detection accurately with the pitch and cleaning the input signal to optimize the output. Our main method for connecting the onset/offset was by using equal hop sizes as the pitch tracker. This way we could create a sorted array of different events labeled as either an onset, an offset or a pitch change.  This method allowed us to most easily create a midi file using the data. In terms of cleaning the data, we used methods such as optional bpm and key signature inputs, removing pitch spikes that were too short to have been sung and removing excessive repetition that was caused by occasional inaccuracies in the onset detector.</p>
+							<h3><i class="ti-paint-roller"></i> Development/Testing</h3>
+							<p>The bulk of the overhead development came in the form of data collection and cleaning. We used the python package sportsreference to gather the NFL statistics used to create the majority of the features for our model. As for the tweets, we used the python package tweepy to pull tweets from a list of tweet IDs provided by the authors of the predictive twitter model. We then used VADER to perform the sentiment analysis. The neural network was developed and tested using pytorch lightning through Google Colab. </p>
 						</div>
 					</div>
 
